@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Choisir HouseRent pour votre projet de location immobilière c’est choisir le professionnalisme et la transparence.  ">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/myfavicons.png">
+    <!-- Page Title  -->
+    <title>{{ title }} | HouseRent </title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="./assets/css/dashlite.css?ver=2.0.0">
+    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=2.0.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body class="nk-body npc-default has-apps-sidebar has-sidebar ">
+    <div class="nk-app-root">
+        {{> menuSidebar}}
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                <!-- main header @s -->
+                {{> menuHeader}}
+                <!-- main header @e -->
+                {{> menuMain}}
+                <!-- content @s -->
+                {{{ body }}}
+                <!-- content @e -->
+            </div>
+            <!-- wrap @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+    <!-- JavaScript -->
+    <script src="./assets/js/bundle.js?ver=2.0.0"></script>
+    <script src="./assets/js/scripts.js?ver=2.0.0"></script>
+    <script src="./assets/js/charts/gd-analytics.js?ver=2.0.0"></script>
+    <script src="./assets/js/libs/jqvmap.js?ver=2.0.0"></script>
+    <script src="./assets/js/customs/{{myScript}}.js"></script>
+</body>
+
+</html>

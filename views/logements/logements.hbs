@@ -1,0 +1,108 @@
+{{listLogement}}
+
+<div class="nk-content">
+    <div class="nk-block nk-block-lg">
+        <div class="nk-block-head">
+            <div class="nk-block-head-content">
+                <h4 class="nk-block-title">LISTE LOGEMENTS</h4>
+                <div class="nk-block-des">
+                    <p>Le tableau ci-dessous représente la liste des Logements de HouseRent</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-preview">
+            <div class="card-inner">
+                <table class="datatable-init nk-tb-list nk-tb-ulist" data-auto-responsive="false">
+                    <thead>
+                        <tr class="nk-tb-item nk-tb-head">
+                            <th class="nk-tb-col nk-tb-col-check">
+                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                    <input type="checkbox" class="custom-control-input" id="uid">
+                                    <label class="custom-control-label" for="uid"></label>
+                                </div>
+                            </th>
+                            <th class="nk-tb-col"><span class="sub-text">logements</span></th>
+                            <th class="nk-tb-col tb-col-lg"><span class="sub-text">id_client</span></th>
+                            <th class="nk-tb-col tb-col-md"><span class="sub-text">nbre piece</span></th>
+                            <th class="nk-tb-col tb-col-md"><span class="sub-text">Date construction</span></th>
+                            <th class="nk-tb-col tb-col-md"><span class="sub-text">Appart/pallier</span></th>
+                            <th class="nk-tb-col tb-col-md"><span class="sub-text">numero etage</span></th>
+                            <th class="nk-tb-col tb-col-md"><span class="sub-text">balcon</span></th>
+                            <th class="nk-tb-col tb-col-md"><span class="sub-text">ascenseur</span></th>
+                            <th class="nk-tb-col nk-tb-col-tools text-right">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         {{#each listLogements  }}
+                        <tr class="nk-tb-item">
+                            <td class="nk-tb-col nk-tb-col-check">
+                                <div class="custom-control custom-control-sm custom-checkbox notext">
+                                    <input type="checkbox" class="custom-control-input" id="uid1">
+                                    <label class="custom-control-label" for="uid1"></label>
+                                </div>
+                            </td>
+                            <td class="nk-tb-col">
+                                <div class="user-card">
+                                    <div class="user-info">
+                                        <span class="tb-lead">{{ type_logement }}<span class="dot dot-success d-md-none ml-1"></span></span>
+                                        <span>{{superficie_logements}}</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="nk-tb-col tb-col-mb" data-order="35040.34">
+                                <span class="tb-amount">{{ idclient_logements }}</span></span>
+                            </td>
+                            <td class="nk-tb-col tb-col-md">
+                                <span>{{ nbrepiece_logements }}</span>
+                            </td>
+                            
+                            <td class="nk-tb-col tb-col-lg">
+                                <span>{{ dateconstruction_logements }}</span>
+                            </td>
+
+                            <td class="nk-tb-col tb-col-lg">
+                                <span>{{ Appart/pallier }}</span>
+                            </td>
+
+                            <td class="nk-tb-col tb-col-lg">
+                                <span>{{ etage_logements }}</span>
+                            </td>
+                            <td class="nk-tb-col tb-col-lg">
+                                <span>{{ balcon_logements }}</span>
+                            </td>
+                            <td class="nk-tb-col tb-col-lg">
+                                <span>{{ ascenseur_logements }}</span>
+                            </td>
+                            
+                            <td class="nk-tb-col nk-tb-col-tools">
+                                <ul class="nk-tb-actions gx-1">
+                                    <li>
+                                        <div class="drodown">
+                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <ul class="link-list-opt no-bdr">
+                                                    <li><a href="/clients/{{id_clients}}"><em class="icon ni ni-focus"></em><span>Profil</span></a></li>
+                                                    <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
+                                                    <li><a href="#"><em class="icon ni ni-repeat"></em><span>Transaction</span></a></li>
+                                                    <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Activities</span></a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
+                                                    <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
+                                                    <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr><!-- .nk-tb-item  -->
+                            {{/each }}
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- .card-preview -->
+    </div> <!-- nk-block -->  
+</div>                                                                 
+         

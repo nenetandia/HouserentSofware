@@ -1,0 +1,142 @@
+
+{{#if findTypelogement}}
+    <div class="nk-content ">
+                        <div class="container-fluid">
+                            <div class="nk-content-inner">
+                                <div class="nk-content-body">
+                                    <div class="components-preview wide-md mx-auto">
+                                        <div class="nk-block-head nk-block-head-lg wide-sm">
+                                            <div class="nk-block-head-content">
+                                                <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Components</span></a></div>
+                                                <h2 class="nk-block-title fw-normal">Formulaire de Création logement</h2>
+                                                <div class="nk-block-des">
+                                                    <p class="lead">Remplir tous les champs pour enrégistrer un nouveau logement.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-block-head -->
+                                        <div class="nk-block nk-block-lg">
+                                            <div class="nk-block-head">
+                                                <div class="nk-block-head-content">                                                   
+                                                    {{#if success }}
+                                                        <div class="alert alert-fill alert-icon alert-success" role="alert">
+                                                            <em class="icon ni ni-alert-circle"></em> 
+                                                            <strong>Enregistré</strong>.{{message}}
+                                                        </div>
+                                                    {{/if}}
+                                                    {{#if error }}
+                                                        <div class="alert alert-fill alert-icon alert-danger" role="alert">
+                                                            <em class="icon ni ni-alert-circle"></em> 
+                                                            <strong>Erreur</strong>.{{message}}
+                                                        </div>
+                                                    {{/if}}
+                                                </div>
+                                            </div>
+                                            <div class="card card-bordered">
+                                                <div class="card-inner">
+                                                    <form action="/add_locataire" class="form-validate" method="post">
+                                                        <div class="row g-gs">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="dde_logement">date de Création</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="dde_logement" name="dde_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="idtypelogements_logements">Type de Logement</label>
+                                                                    <div class="form-control-wrap ">
+                                                                        <select class="form-control form-select" id="idtypelogements_logements" name="idtypelogements_logements" data-placeholder="Select a option" required>
+                                                                            <option selected value="">Sélectionner</option>
+                                                                            {{#each typeLogements}}
+                                                                                <option value="{{id_typelogements }}">{{type_logements}}</option>
+                                                                            {{/each}}
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="client_logement">client</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="email" class="form-control" id="client_logement" name="client_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="superficie_logement">Superficie</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="superficie_logement" name="superficie_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="nbrepiece_logement">nbre piece</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="nbrepiece_logement" name="nbrepiece_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="dateconstruction_logement">Date Construction</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="dateconstruction_logement" name="dateconstruction_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="appartpallier_logement">nbre appart/pallier</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="appartpallier_logement" name="appartpallier_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="etage_logement">etage</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="etage_logement" name="etage_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="balcon_logement">balcon</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="balcon_logement" name="balcon_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="ascenseur_logement">ascenseur</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="ascenseur_logement" name="ascenseur_logement" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                           
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-block -->
+                                    </div><!-- .components-preview -->
+                                </div>
+                            </div>
+                        </div>
+    </div>
+
+    {{else}}
+    <p>Le paramètre type_logement est manquant.</p>
+<{{/if}}

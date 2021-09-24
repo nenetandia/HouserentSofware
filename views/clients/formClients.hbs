@@ -1,0 +1,118 @@
+
+{{#if findSexe}}
+    <div class="nk-content ">
+                        <div class="container-fluid">
+                            <div class="nk-content-inner">
+                                <div class="nk-content-body">
+                                    <div class="components-preview wide-md mx-auto">
+                                        <div class="nk-block-head nk-block-head-lg wide-sm">
+                                            <div class="nk-block-head-content">
+                                                <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Components</span></a></div>
+                                                <h2 class="nk-block-title fw-normal">Formulaire de Création Client</h2>
+                                                <div class="nk-block-des">
+                                                    <p class="lead">Remplir tous les champs pour enrégistrer un nouveau client.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-block-head -->
+                                        <div class="nk-block nk-block-lg">
+                                            <div class="nk-block-head">
+                                                <div class="nk-block-head-content">                                                    
+                                                    {{#if success }}
+                                                        <div class="alert alert-fill alert-icon alert-success" role="alert">
+                                                            <em class="icon ni ni-alert-circle"></em> 
+                                                            <strong>Enregistré</strong>.{{message}}
+                                                        </div>
+                                                    {{/if}}
+                                                    {{#if error }}
+                                                        <div class="alert alert-fill alert-icon alert-danger" role="alert">
+                                                            <em class="icon ni ni-alert-circle"></em> 
+                                                            <strong>Erreur</strong>.{{message}}
+                                                        </div>
+                                                    {{/if}}
+                                                </div>
+                                            </div>
+                                            <div class="card card-bordered">
+                                                <div class="card-inner">
+                                                    <form action="/add_client" class="form-validate" method="post">
+                                                        <div class="row g-gs">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="dde_client">date de Création</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="dde_client" name="dde_client" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="nom_client">Nom</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="nom_client" name="nom_client" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="email_client">Email</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="email" class="form-control" id="email_client" name="email_client" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="telephone_client">Telephone</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="telephone_client" name="telephone_client" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="profession_client">Profession</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="profession_client" name="profession_client" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="ddn_client">Date de Naissance</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="date" class="form-control" id="ddn_client" name="ddn_client" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="sexe_client">Sexe</label>
+                                                                    <div class="form-control-wrap ">
+                                                                        <select class="form-control form-select" id="sexe_client" name="sexe_client" data-placeholder="Select a option" required>
+                                                                            <option selected value="">Sélectionner</option>
+                                                                            {{#each sexes}}
+                                                                                <option value="{{id_sexe}}">{{nom_sexe}}</option>
+                                                                            {{/each}}
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-block -->
+                                    </div><!-- .components-preview -->
+                                </div>
+                            </div>
+                        </div>
+    </div>
+
+    {{else}}
+    <p>Le paramètre sexe est manquant.</p>
+<{{/if}}
